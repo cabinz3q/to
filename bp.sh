@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 # Create log file
-LOG_FILE="/data/local/tmp/bypass_log.txt"
+LOG_FILE="/data/local/tmp/toram/bypass_log.txt"
 su -c "touch $LOG_FILE"
 su -c "chmod 666 $LOG_FILE"
 
