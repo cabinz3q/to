@@ -26,7 +26,7 @@ if [ $isrun == 0 ]; then
     su -c "mkdir -p $BACKUP_DIR"
     
     # Copy the library file
-    su -c "cp $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/"
+    su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/"
     if [ $? -eq 0 ]; then
         log_message "Successfully copied libil2cpp.so to backup directory"
     else
