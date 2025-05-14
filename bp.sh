@@ -18,8 +18,10 @@ BACKUP_DIR="/data/local/tmp/toram"
 
 log_message "Found app path: $APP_PATH"
 
+isrun=0
+
 # Check if this is the first run
-if [ ! -d "$BACKUP_DIR" ]; then
+if [ $isrun == 0 ]; then
     log_message "First run detected, creating backup directory"
     su -c "mkdir -p $BACKUP_DIR"
     
@@ -32,6 +34,7 @@ if [ ! -d "$BACKUP_DIR" ]; then
         su -c "rm -rf $BACKUP_DIR"
         exit 1
     fi
+    isrun=1
 else
     log_message "Backup directory already exists"
 fi
