@@ -54,6 +54,7 @@ log_message "Starting monitoring loop"
 while true; do
     if ! is_app_running; then
         log_message "Application is not running, cleaning up and exiting"
+        su -c "mv $BACKUP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so"
         su -c "rm -rf $BACKUP_DIR"
         su -c "echo \"Bypass deactivated at $(date)\" >> $LOG_FILE"
         exit 0
