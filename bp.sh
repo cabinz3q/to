@@ -31,7 +31,7 @@ if [ $isrun == 0 ]; then
         log_message "Successfully copied libil2cpp.so to backup directory"
     else
         log_message "Failed to copy libil2cpp.so"
-        su -c "rm -rf $BACKUP_DIR"
+       # su -c "rm -rf $BACKUP_DIR"
         exit 1
     fi
     isrun=1
@@ -54,8 +54,8 @@ log_message "Starting monitoring loop"
 while true; do
     if ! is_app_running; then
         log_message "Application is not running, cleaning up and exiting"
-        su -c "mv $BACKUP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so"
-        su -c "rm -rf $BACKUP_DIR"
+        su -c "cp $BACKUP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so"
+        #su -c "rm -rf $BACKUP_DIR"
         su -c "echo \"Bypass deactivated at $(date)\" >> $LOG_FILE"
         exit 0
     fi
