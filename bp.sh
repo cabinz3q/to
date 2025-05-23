@@ -1,11 +1,12 @@
 #!/system/bin/sh
 
 # Create log file
-LOG_FILE="/data/local/tmp/toram/bypass_log.txt"
-PID_FILE="/data/local/tmp/toram/bypass_toram_pid.log"
+LOG_FILE="/sdcard/Android/toram/bypass_log.txt"
+PID_FILE="/sdcard/Android/toram/bypass_toram_pid.log"
 
 # Create directories if they don't exist
-su -c "mkdir -p /data/local/tmp/toram"
+BACKUP_DIR="/sdcard/Android/toram"
+su -c "mkdir -p $BACKUP_DIR"
 su -c "touch $LOG_FILE"
 su -c "chmod 666 $LOG_FILE"
 
@@ -37,7 +38,7 @@ log_message "Saved current PID: $$"
 
 # Find Toram Online app path
 APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\"")
-BACKUP_DIR="/data/local/tmp/toram"
+
 
 log_message "Found app path: $APP_PATH"
 
