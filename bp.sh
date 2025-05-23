@@ -79,6 +79,7 @@ while true; do
     if ! is_app_running; then
         log_message "Application is not running, cleaning up and exiting"
         su -c "cp $BACKUP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so"
+        su -c "chmod 755 $APP_PATH/lib/arm64/libil2cpp.so"
         su -c "rm -f $PID_FILE"
         su -c rm /data/local/tmp/toram
         su -c "echo \"Bypass deactivated at $(date)\" >> $LOG_FILE"
