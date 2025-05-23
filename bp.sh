@@ -1,14 +1,14 @@
 #!/system/bin/sh
 
-# Create log file
-LOG_FILE="/sdcard/Android/toram/bypass_log.txt"
-PID_FILE="/sdcard/Android/toram/bypass_toram_pid.log"
+BACKUP_DIR="/sdcard/Android/toram"
 
 # Create directories if they don't exist
-BACKUP_DIR="/sdcard/Android/toram"
 su -c "mkdir -p $BACKUP_DIR"
+# Create log file
+LOG_FILE="$BACKUP_DIR/bypass_log.txt"
+PID_FILE="$BACKUP_DIR/bypass_toram_pid.log"
 su -c "touch $LOG_FILE"
-su -c "chmod 666 $LOG_FILE"
+
 
 log_message() {
     local message="$1"
@@ -81,7 +81,6 @@ while true; do
         su -c "cp $BACKUP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so"
         su -c "chmod 755 $APP_PATH/lib/arm64/libil2cpp.so"
         su -c "rm -f $PID_FILE"
-        su -c rm /data/local/tmp/toram
         su -c "echo \"Bypass deactivated at $(date)\" >> $LOG_FILE"
         exit 0
     fi
