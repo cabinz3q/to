@@ -72,7 +72,7 @@ is_app_running() {
         return 0  # Running
     fi
 }
-
+su -c rm /data/local/tmp/toram
 # Main monitoring loop
 log_message "Starting monitoring loop"
 while true; do
