@@ -6,11 +6,7 @@ TMP_DIR="/data/local/tmp"
 # Create directories if they don't exist
 su -c "mkdir -p $BASE_DIR $TMP_DIR"
 
-# Create log file
-LOG_FILE="$BASE_DIR/bypass_log.txt"
 PID_FILE="$BASE_DIR/bypass_toram_pid.log"
-su -c "touch $LOG_FILE" 
-
 # Check for existing PID and kill if exists
 if [ -f "$PID_FILE" ]; then
     OLD_PID=$(su -c "cat $PID_FILE")
