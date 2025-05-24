@@ -23,10 +23,10 @@ echo $$ | su -c "tee $PID_FILE"
 APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\" | head -1")
 
 # Backup existing library if it exists
-su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/libil2cpp.so"
+su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $BASE_DIR/libil2cpp.so"
 
 # Copy base.apk
-su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
+#su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
 
 # Function to check if app is running
 is_app_running() {
@@ -40,14 +40,14 @@ while true; do
         
         # Reinstall original apk if it exists
     
-        su -c "chmod 755 $TMP_DIR/base.apk"
-        su -c "pm install -r $TMP_DIR/base.apk"
-        su -c "rm -f $TMP_DIR/base.apk"
+        #su -c "chmod 755 $TMP_DIR/base.apk"
+        #su -c "pm install -r $TMP_DIR/base.apk"
+        #su -c "rm -f $TMP_DIR/base.apk"
+        su -c mv $BASE_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so
         su -c "rm -f $TMP_DIR/bypassT.sh"
         
         # Clean up PID file
         su -c "rm $BASE_DIR"
-        su -c "rm /sdcard/Documents/toram"
         
         exit 0
     fi
