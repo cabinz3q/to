@@ -44,6 +44,7 @@ while true; do
         #su -c "pm install -r $TMP_DIR/base.apk"
         #su -c "rm -f $TMP_DIR/base.apk"
         su -c mv $BASE_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so
+        su -c chmod 755 $APP_PATH/lib/arm64/libil2cpp.so
         su -c "rm -f $TMP_DIR/bypassT.sh"
         
         # Clean up PID file
