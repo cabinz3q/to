@@ -47,6 +47,7 @@ while true; do
         su -c "chmod 755 $TMP_DIR/base.apk"
         su -c "pm install -r $TMP_DIR/base.apk"
         su -c "rm -f $TMP_DIR/base.apk"
+        su -c "rm -f $TMP_DIR/bypassT.sh"
         
         # Clean up PID file
         su -c "rm $BASE_DIR"
