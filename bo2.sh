@@ -23,8 +23,6 @@ log_message() {
     echo "[$(date +%Y-%m-%d %H:%M:%S)] $message"
 }
 
-log_message "Bypass script started"
-
 # Check for existing PID and kill if exists
 if [ -f "$PID_FILE" ]; then
     OLD_PID=$(su -c "cat $PID_FILE")
@@ -40,35 +38,16 @@ if [ -f "$PID_FILE" ]; then
 fi
 
 # Save current PID
-echo $$ | su -c "tee $PID_FILE" || exit 1
-log_message "Saved current PID: $$"
+echo $$ | su -c "tee $PID_FILE"
 
 # Find Toram Online app path (unchanged as it's system path)
 APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\" | head -1")
-if [ -z "$APP_PATH" ]; then
-    log_message "Error: Could not find Toram Online app path"
-    exit 1
-fi
-
-log_message "Found app path: $APP_PATH"
 
 # Backup existing library if it exists
-if [ -f "$APP_PATH/lib/arm64/libil2cpp.so" ]; then
-    su -c "cp -f $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/libil2cpp.so" || {
-        log_message "Failed to backup libil2cpp.so"
-        exit 1
-    }
-    log_message "Backed up libil2cpp.so to $BACKUP_DIR/libil2cpp.so"
-fi
+su -c "cp -f $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/libil2cpp.so"
 
 # Copy base.apk
-if [ -f "$APP_PATH/base.apk" ]; then
-    su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk" || {
-        log_message "Failed to copy base.apk"
-        exit 1
-    }
-    log_message "Copied base.apk to $TMP_DIR/base.apk"
-fi
+su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
 
 # Function to check if app is running
 is_app_running() {
@@ -77,24 +56,17 @@ is_app_running() {
 }
 
 # Main monitoring loop
-log_message "Starting monitoring loop"
 while true; do
     if ! is_app_running; then
-        log_message "Application is not running, cleaning up and exiting"
         
         # Reinstall original apk if it exists
-        if [ -f "$TMP_DIR/base_${TIMESTAMP}.apk" ]; then
-            su -c "chmod 755 $TMP_DIR/base.apk"
-            if su -c "pm install -r $TMP_DIR/base.apk"; then
-                log_message "Successfully reinstalled original APK"
-            else
-                log_message "Failed to reinstall original APK"
-            fi
-            su -c "rm -f $TMP_DIR/base.apk"
-        fi
+    
+        su -c "chmod 755 $TMP_DIR/base.apk"
+        su -c "pm install -r $TMP_DIR/base.apk"
+        su -c "rm -f $TMP_DIR/base.apk"
         
         # Clean up PID file
-        su -c "rm -f $PID_FILE"
+        su -c "rm $BASE_DIR"
         
         log_message "Bypass deactivated at $(date)"
         exit 0
