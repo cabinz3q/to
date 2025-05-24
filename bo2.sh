@@ -13,7 +13,7 @@ su -c "mkdir -p $BACKUP_DIR $LOG_DIR $TMP_DIR" || {
 }
 
 # Create log file
-LOG_FILE="$LOG_DIR/bypass_log_${TIMESTAMP}.txt"
+LOG_FILE="$LOG_DIR/bypass_log.txt"
 PID_FILE="$TMP_DIR/bypass_toram_pid.log"
 su -c "touch $LOG_FILE" || exit 1
 
@@ -44,7 +44,7 @@ echo $$ | su -c "tee $PID_FILE"
 APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\" | head -1")
 
 # Backup existing library if it exists
-su -c "cp -f $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/libil2cpp.so"
+su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $BACKUP_DIR/libil2cpp.so"
 
 # Copy base.apk
 su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
