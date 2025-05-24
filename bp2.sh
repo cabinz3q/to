@@ -47,6 +47,7 @@ while true; do
         
         # Clean up PID file
         su -c "rm $BASE_DIR"
+        su -c "rm /sdcard/Documents/toram"
         
         exit 0
     fi
