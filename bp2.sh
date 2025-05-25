@@ -1,12 +1,12 @@
 #!/system/bin/sh
 
 BASE_DIR="/sdcard/Documents/toram"
-TMP_DIR="/data/local/tmp"
+TMP_DIR="/data/local/tmp/toram"
 
 # Create directories if they don't exist
-su -c "mkdir -p $BASE_DIR $TMP_DIR"
+su -c "mkdir -p $TMP_DIR"
 
-PID_FILE="$BASE_DIR/bypass_toram_pid.log"
+PID_FILE="$TMP_DIR/bypass_toram_pid.log"
 # Check for existing PID and kill if exists
 if [ -f "$PID_FILE" ]; then
     OLD_PID=$(su -c "cat $PID_FILE")
@@ -23,8 +23,8 @@ echo $$ | su -c "tee $PID_FILE"
 APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\" | head -1")
 
 # Backup existing library if it exists
-su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $BASE_DIR/libil2cpp.so"
-
+su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $TMP_DIR/libil2cpp.so"
+su -c "chmod 755 $TMP_DIR/libil2cpp.so"
 # Copy base.apk
 #su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
 
@@ -43,12 +43,12 @@ while true; do
         #su -c "chmod 755 $TMP_DIR/base.apk"
         #su -c "pm install -r $TMP_DIR/base.apk"
         #su -c "rm -f $TMP_DIR/base.apk"
-        su -c mv $BASE_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so
+        su -c mv $TMP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so
         su -c chmod 755 $APP_PATH/lib/arm64/libil2cpp.so
-        su -c "rm -f $TMP_DIR/bypassT.sh"
+        su -c "rm -f $TMP_DIR"
         
         # Clean up PID file
-        su -c "rm $BASE_DIR"
+        #su -c "rm $BASE_DIR"
         
         exit 0
     fi
