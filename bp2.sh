@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-BASE_DIR="/sdcard/Documents/toram"
+BASE_DIR="/sdcard/Documents"
 TMP_DIR="/data/local/tmp/toram"
 
 # Create directories if they don't exist
