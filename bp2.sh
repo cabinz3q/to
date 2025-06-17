@@ -31,13 +31,13 @@ fi
 # Backup libil2cpp.so jika ada
 LIB_PATH="$APP_PATH/lib/arm64/libil2cpp.so"
 if su -c "[ -f '$LIB_PATH' ]"; then
-    su -c "cp -f '$LIB_PATH' '$TMP_DIR/libil2cpp.so'"
+    su -c "mv '$LIB_PATH' '$TMP_DIR/libil2cpp.so'"
     su -c "chmod 755 '$TMP_DIR/libil2cpp.so'"
 fi
 
 # Fungsi pengecekan apakah aplikasi sedang berjalan
 is_app_running() {
-    su -c "dumpsys activity processes | grep -q com.asobimo.toramonline"
+    su -c dumpsys activity services | grep com.asobimo.toramonline  | grep binding
 }
 
 # Loop pemantauan
