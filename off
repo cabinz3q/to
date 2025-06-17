@@ -1,6 +1,6 @@
 o_warcry0mp = 0x14341DC
 o_brave0mp = 0x1402550
-o_unbuff = 0x13D9248
+o_unbuff = 0x13DC634
 o_mele = 0x111DB38
 o_sele = 0x111DC04
 o_mqnoitem1 = 0x1FDB8EC
