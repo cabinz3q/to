@@ -2,57 +2,59 @@
 
 BASE_DIR="/sdcard/Documents"
 TMP_DIR="/data/local/tmp/toram"
+PID_FILE="$TMP_DIR/bypass_toram_pid.log"
 
-# Create directories if they don't exist
+# Buat direktori jika belum ada
 su -c "mkdir -p $TMP_DIR"
 
-PID_FILE="$TMP_DIR/bypass_toram_pid.log"
-# Check for existing PID and kill if exists
-if [ -f "$PID_FILE" ]; then
-    OLD_PID=$(su -c "cat $PID_FILE")
+# Cek dan bunuh proses lama jika ada
+if su -c "[ -f '$PID_FILE' ]"; then
+    OLD_PID=$(su -c "cat '$PID_FILE'")
     if [ -n "$OLD_PID" ]; then
         su -c "kill -9 $OLD_PID" 2>/dev/null
     fi
-    su -c "rm -f $PID_FILE"
+    su -c "rm -f '$PID_FILE'"
 fi
 
-# Save current PID
-echo $$ | su -c "tee $PID_FILE"
+# Simpan PID sekarang
+echo $$ | su -c "tee '$PID_FILE' >/dev/null"
 
-# Find Toram Online app path (unchanged as it's system path)
-APP_PATH=$(su -c "find /data/app -type d -name \"com.asobimo.toramonline-*\" | head -1")
+# Cari path aplikasi Toram
+APP_PATH=$(su -c "find /data/app -type d -name 'com.asobimo.toramonline-*' | head -n 1")
 
-# Backup existing library if it exists
-su -c "mv $APP_PATH/lib/arm64/libil2cpp.so $TMP_DIR/libil2cpp.so"
-su -c "chmod 755 $TMP_DIR/libil2cpp.so"
-# Copy base.apk
-#su -c "cp -f $APP_PATH/base.apk $TMP_DIR/base.apk"
+# Pastikan path valid
+if [ -z "$APP_PATH" ]; then
+    echo "❌ Gagal menemukan path aplikasi Toram"
+    exit 1
+fi
 
-# Function to check if app is running
+# Backup libil2cpp.so jika ada
+LIB_PATH="$APP_PATH/lib/arm64/libil2cpp.so"
+if su -c "[ -f '$LIB_PATH' ]"; then
+    su -c "cp -f '$LIB_PATH' '$TMP_DIR/libil2cpp.so'"
+    su -c "chmod 755 '$TMP_DIR/libil2cpp.so'"
+fi
+
+# Fungsi pengecekan apakah aplikasi sedang berjalan
 is_app_running() {
-    APP_RUNNING=$(su -c "dumpsys activity processes | grep com.asobimo.toramonline" 2>/dev/null)
-    [ -n "$APP_RUNNING" ]
+    su -c "dumpsys activity processes | grep -q com.asobimo.toramonline"
 }
 
-# Main monitoring loop
+# Loop pemantauan
 while true; do
     if ! is_app_running; then
-        
-        # Reinstall original apk if it exists
-    
-        #su -c "chmod 755 $TMP_DIR/base.apk"
-        #su -c "pm install -r $TMP_DIR/base.apk"
-        #su -c "rm -f $TMP_DIR/base.apk"
-        su -c mv $TMP_DIR/libil2cpp.so $APP_PATH/lib/arm64/libil2cpp.so
-        su -c chmod 755 $APP_PATH/lib/arm64/libil2cpp.so
-        su -c "rm -f $TMP_DIR"
-        
-        # Clean up PID file
-        #su -c "rm $BASE_DIR"
-        
+        # Restore libil2cpp.so jika tersedia
+        if su -c "[ -f '$TMP_DIR/libil2cpp.so' ]"; then
+            su -c "cp -f '$TMP_DIR/libil2cpp.so' '$LIB_PATH'"
+            su -c "chmod 755 '$LIB_PATH'"
+        fi
+
+        # Hapus direktori TMP secara aman
+        su -c "rm -rf '$TMP_DIR'"
+
         exit 0
     fi
-    
-    # Sleep for 5 seconds before checking again
+
+    # Delay 5 detik
     sleep 5
 done
