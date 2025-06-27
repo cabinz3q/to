@@ -45,4 +45,6 @@ o_mqnoitem1 = 0x1FFF690
 o_mqnoitem2 = 0x20019B4
 o_skipmob1 = 0x1FFFC74
 o_skipmob2 = 0x2001F98
-o_unlockmap = 0x12411BC
+o_noquest = 0x12411BC
+o_unlockmap = 0xC39D98
+o_nodrop = 0x13AB47C
