@@ -1,50 +1,857 @@
+-- Toram Offsets Generated
+
+-- public class SkillBufferManager // TypeDefIndex: 3265 | public void Update() { }
 o_unbuff = 0x14063E8
+
+-- public abstract class PlayerStatusBase // TypeDefIndex: 1402 | public ElementType GetEquipElement() { }
 o_mele = 0x1137AB4
+
+-- public abstract class PlayerStatusBase // TypeDefIndex: 1402 | public ElementType GetEquipSubWeaponElement() { }
 o_sele = 0x1137B80
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Def() { }
 o_def = 0x112DAA8
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Mdef() { }
 o_mdef = 0x112DADC
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int GetDefFact(int def) { }
 o_def_fact = 0x1130DF4
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int GetMdefFact(int mdef) { }
 o_mdef_fact = 0x1130E98
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_CriticalDmg() { }
 o_p_cdm = 0x112F3D0
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_CriticalMagicDmg() { }
 o_m_cdm = 0x112F6F0
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_AntiVirus() { }
 o_ailment_res = 0x112F964
+
+-- public class MobBattleStatus : IMobStatusCalculator // TypeDefIndex: 869 | public int get_ExpDefNormal() { }
 o_mob_prorate_normal = 0xFF101C
+
+-- public class MobBattleStatus : IMobStatusCalculator // TypeDefIndex: 869 | public int get_ExpDefSkill() { }
 o_mob_prorate_skill = 0xFF1034
+
+-- public class MobBattleStatus : IMobStatusCalculator // TypeDefIndex: 869 | public int get_ExpDefMagic() { }
 o_mob_prorate_magic = 0xFF104C
+
+-- public class BossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 801 | public int get_ExpDefNormal() { }
 o_bos_prorate_normal = 0xFB4B2C
+
+-- public class BossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 801 | public int get_ExpDefSkill() { }
 o_bos_prorate_skill = 0xFB4B44
+
+-- public class BossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 801 | public int get_ExpDefMagic() { }
 o_bos_prorate_magic = 0xFB4B5C
+
+-- public class MobBattleStatus : IMobStatusCalculator // TypeDefIndex: 869 | public int CalcDef(PlayerStatusBase status) { }
 o_mob_def = 0xFF0830
+
+-- public class MobBattleStatus : IMobStatusCalculator // TypeDefIndex: 869 | public int CalcMdef(PlayerStatusBase status) { }
 o_mob_mdef = 0xFF0A38
+
+-- public class BossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 801 | public int CalcDef(PlayerStatusBase status) { }
 o_bos_def = 0xFB35BC
+
+-- public class BossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 801 | public int CalcMdef(PlayerStatusBase status) { }
 o_bos_mdef = 0xFB3998
+
+-- public class GuildRaidBossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 834 | public int CalcDef(PlayerStatusBase status) { }
 o_bosraid_def = 0xFE312C
+
+-- public class GuildRaidBossMobBattleStatus : IMobStatusCalculator, IBossPartsStatus // TypeDefIndex: 834 | public int CalcMdef(PlayerStatusBase status) { }
 o_bosraid_mdef = 0xFE3240
+
+-- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected static int CalcPowerResistDamage(PlayerStatusBase status, int targetDef, float addResist) { }
 o_physp = 0x114D6D4
+
+-- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected static int CalcMagicResistDamage(PlayerStatusBase status, int targetMdef, float addResist) { }
 o_magip = 0x114D7A0
+
+-- public abstract class EnemyMobActionManagerBase : CharacterActionManagerBase, MobActionManagerBase // TypeDefIndex: 831 | public override float get_Size() { }
 o_long_range_atk = 0xFC10AC
+
+-- public abstract class SkillActionBase : IEquatable<SkillActionBase> // TypeDefIndex: 354 | public virtual bool CheckRangeHit(Transform actorTransform, Transform targetTransform, float size) { }
 o_range_skill = 0x15A2160
+
+-- public abstract class SkillActionBase : IEquatable<SkillActionBase> // TypeDefIndex: 354 | public virtual void NextRangeHit() { }
 o_dmg_skill = 0x15A2168
+
+-- public class PlayerActionManager : PlayerActionManagerBase, IPlayerControl // TypeDefIndex: 1363 | public override float get_MoveSpeed() { }
 o_movement_speed = 0x10F5934
+
+-- public class PlayerStatus : PlayerStatusBase // TypeDefIndex: 1398 | public override bool get_IsInvincibility() { }
 o_godmode = 0x1134BFC
+
+-- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected bool checkCriticalPercent(int criticalParcent, MobActionManagerBase mobAction) { }
 o_p_crit_rate = 0x11414F0
+
+-- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected bool CheckMagicCritical(PlayerStatusBase playerStatus, MobActionManagerBase mobAction) { }
 o_m_crit_rate = 0x1153E60
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Aspd() { }
 o_atknotime = 0x112DB44
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Cspd() { }
 o_castnotime = 0x112DB80
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int GetMotionSpeed(int aspd) { }
 o_motion_speed = 0x1130F64
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Stable() { }
 o_stability = 0x112CF24
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_EqAtk() { }
 o_eqattack = 0x112CDBC
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Hit() { }
 o_mobnoflee = 0x112D290
+
+-- public abstract class EnemyMobActionManagerBase : CharacterActionManagerBase, MobActionManagerBase // TypeDefIndex: 831 | public bool get_SystemInvincible() { }
 o_mobnoinvicible = 0xFC13A0
+
+-- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected SkillHitReactionType checkMobReaction(int guard, int avoid) { }
 o_mobnoevation = 0x11404E8
+
+-- public class MobBattleSystemManager : MonoBehaviour // TypeDefIndex: 706 | public MobAttackBase CreateMobAction(MobActionPattern pattern) { }
 o_mobnomove = 0xDC49C8
+
+-- public class FieldScriptManager : Singleton<FieldScriptManager>, ISceneChangeManager // TypeDefIndex: 4366 | private void ChangeEventScene(FieldScriptManager.EventSceneType sceneType) { }
 o_autoskip1 = 0x15D4B98
+
+-- public class FieldScriptManager : Singleton<FieldScriptManager>, ISceneChangeManager // TypeDefIndex: 4366 | private UIEventMessageWindow GetUIEventMessageWindow() { }
 o_autoskip2 = 0x15D4E70
+
+-- public class RoomManager : Singleton<RoomManager>, ISceneChangeManager // TypeDefIndex: 2281 | public bool get_IsBattleEnd() { }
 o_skipboss = 0x1281664
+
+-- public class QuestItemCommon : BinaryBase, IScenarioItem // TypeDefIndex: 8595 | public short get_ItemNum() { }
 o_mqnoitem1 = 0x1FFF690
+
+-- public class MissionItemCommon : BinaryBase, IScenarioItem // TypeDefIndex: 8600 | public short get_ItemNum() { }
 o_mqnoitem2 = 0x20019B4
+
+-- public class QuestItemCommon : BinaryBase, IScenarioItem // TypeDefIndex: 8595 | public short get_SubdueNum() { }
 o_skipmob1 = 0x1FFFC74
+
+-- public class MissionItemCommon : BinaryBase, IScenarioItem // TypeDefIndex: 8600 | public short get_SubdueNum() { }
 o_skipmob2 = 0x2001F98
+
+-- public class QuestManager : MonoBehaviour // TypeDefIndex: 2085 | private void GetScenarioIdList(Dictionary<int, List<int>> dic, TextManagerBase textManager, int[] keys) { }
 o_noquest = 0x12411BC
+
+-- private sealed class UIWorldMapPanel.<Initialize>d__82 : IEnumerator<object>, IEnumerator, IDisposable // TypeDefIndex: 6704 | private bool MoveNext() { }
 o_unlockmap = 0xC39D98
+
+-- public class EffectPlayer : MonoBehaviour // TypeDefIndex: 259 | private int PlayDropBox(EffectPlayer.DropData data) { }
 o_nodrop = 0x13AB47C
+
+-- public class AccelBladeBuf : SkillBufferDataBase // TypeDefIndex: 2800 | public override void Updata() { }
+o_buff1 = 0x13C5510
+
+-- public class AegisBuf : SkillBufferDataBase // TypeDefIndex: 2801 | public override void Updata() { }
+o_buff2 = 0x13C55A8
+
+-- public class AfterShieldBuf : SkillBufferDataBase // TypeDefIndex: 2802 | public override void Updata() { }
+o_buff3 = 0x13C58B8
+
+-- public class ArialSlayBuf : SkillBufferDataBase // TypeDefIndex: 2803 | public override void Updata() { }
+o_buff4 = 0x13C59C0
+
+-- public class ArkSaberBuf : SkillBufferDataBase // TypeDefIndex: 2804 | public override void Updata() { }
+o_buff5 = 0x13C5B88
+
+-- public class ArrowSharpeningBuf : SkillBufferDataBase // TypeDefIndex: 2805 | public override void Updata() { }
+o_buff6 = 0x13C5C84
+
+-- public class AshuraAuraBuf : CountBufferBase // TypeDefIndex: 2806 | public override void Updata() { }
+o_buff7 = 0x13C61E0
+
+-- public class AspisSeoulBuf : SkillBufferDataBase // TypeDefIndex: 2807 | public override void Updata() { }
+o_buff8 = 0x13C69EC
+
+-- internal class AssassinStubBuf : SkillBufferDataBase // TypeDefIndex: 2808 | public override void Updata() { }
+o_buff9 = 0x13C6A9C
+
+-- public class AssaultChaseBuf : SkillBufferDataBase // TypeDefIndex: 2809 | public override void Updata() { }
+o_buff10 = 0x13C6BB0
+
+-- public class AstralLanceBuf : CountBufferBase // TypeDefIndex: 2810 | public override void Updata() { }
+o_buff11 = 0x13C6E48
+
+-- public class AstuteBuf : SkillBufferDataBase // TypeDefIndex: 2811 | public override void Updata() { }
+o_buff12 = 0x13C717C
+
+-- public class AuraBladeBuf : SkillBufferDataBase // TypeDefIndex: 2812 | public override void Updata() { }
+o_buff13 = 0x13C7340
+
+-- public class AutoDeviceBuf : SkillBufferDataBase // TypeDefIndex: 2813 | public override void Updata() { }
+o_buff14 = 0x13C74A4
+
+-- public class BackstepBuf : SkillBufferDataBase // TypeDefIndex: 2814 | public override void Updata() { }
+o_buff15 = 0x13C7558
+
+-- public class BeautiesOfNatureBuf : SkillBufferDataBase // TypeDefIndex: 2815 | public override void Updata() { }
+o_buff16 = 0x13C7578
+
+-- public class BeragelungBuf : SkillBufferDataBase // TypeDefIndex: 2816 | public override void Updata() { }
+o_buff17 = 0x13C75E8
+
+-- public class BerserkBuf : SkillBufferDataBase // TypeDefIndex: 2817 | public override void Updata() { }
+o_buff18 = 0x13C776C
+
+-- public class BlessBuf : SkillBufferDataBase // TypeDefIndex: 2818 | public override void Updata() { }
+o_buff19 = 0x13C7880
+
+-- public class BlinkSwordBuf : SkillBufferDataBase // TypeDefIndex: 2819 | public override void Updata() { }
+o_buff20 = 0x13C7944
+
+-- public class BlitzPikeBuf : CountBufferBase // TypeDefIndex: 2822 | public override void Updata() { }
+o_buff21 = 0x13C8024
+
+-- public class BoomerangBuf : SkillBufferDataBase // TypeDefIndex: 2823 | public override void Updata() { }
+o_buff22 = 0x13C8E38
+
+-- public class BraveAuraBuf : CircleBufferBase // TypeDefIndex: 2824 | public override void Updata() { }
+o_buff23 = 0x13C9030
+
+-- public class BreathingMethodBuf : SkillBufferDataBase // TypeDefIndex: 2825 | public override void Updata() { }
+o_buff24 = 0x13C9030
+
+-- public class BusterBladeBuf : SkillBufferDataBase // TypeDefIndex: 2826 | public override void Updata() { }
+o_buff25 = 0x13C90B8
+
+-- public class CamouflageBuf : SkillBufferDataBase // TypeDefIndex: 2827 | public override void Updata() { }
+o_buff26 = 0x13C9310
+
+-- public class ChainCastBuf : SkillBufferDataBase // TypeDefIndex: 2828 | public override void Updata() { }
+o_buff27 = 0x13C938C
+
+-- internal class ChainCastStackBuf : CountBufferBase // TypeDefIndex: 2829 | public override void Updata() { }
+o_buff28 = 0x13C9414
+
+-- public class ChakraBuf : SkillBufferDataBase // TypeDefIndex: 2830 | public override void Updata() { }
+o_buff29 = 0x13C965C
+
+-- public class ChargingBuf : SkillBufferDataBase // TypeDefIndex: 2831 | public override void Updata() { }
+o_buff30 = 0x13C970C
+
+-- public class ChronosShiftBuf : CountBufferBase // TypeDefIndex: 2832 | public override void Updata() { }
+o_buff31 = 0x13C9778
+
+-- public class ClearAndSereneBuf : NextAttackBufferBase // TypeDefIndex: 2834 | public override void Updata() { }
+o_buff32 = 0x13C9D9C
+
+-- public class CloningTechniqueBuf : SkillBufferDataBase // TypeDefIndex: 2835 | public override void Updata() { }
+o_buff33 = 0x13C9E8C
+
+-- public class CollectQigongBuf : CountBufferBase // TypeDefIndex: 2836 | public override void Updata() { }
+o_buff34 = 0x13C9FBC
+
+-- public class ConversionBuf : SkillBufferDataBase // TypeDefIndex: 2837 | public override void Updata() { }
+o_buff35 = 0x13CA040
+
+-- public class CounterForceBuf : SkillBufferDataBase // TypeDefIndex: 2840 | public override void Updata() { }
+o_buff36 = 0x13CA340
+
+-- public class CronosDriveBuf : SkillBufferDataBase // TypeDefIndex: 2841 | public override void Updata() { }
+o_buff37 = 0x13CA984
+
+-- public class CrossFireBuf : CountBufferBase // TypeDefIndex: 2842 | public override void Updata() { }
+o_buff38 = 0x13CAD9C
+
+-- public class CutOffTheDisasterBuf : SkillBufferDataBase // TypeDefIndex: 2843 | public override void Updata() { }
+o_buff39 = 0x13CB08C
+
+-- public class DarkStingerBuf : SkillBufferDataBase // TypeDefIndex: 2845 | public override void Updata() { }
+o_buff40 = 0x13CB198
+
+-- public class DeadlySpearBuf : SkillBufferDataBase // TypeDefIndex: 2846 | public override void Updata() { }
+o_buff41 = 0x13CB228
+
+-- public class DeathTorqueShotBuf : SkillBufferDataBase // TypeDefIndex: 2847 | public override void Updata() { }
+o_buff42 = 0x13CB2C4
+
+-- public class DestroyerBuf : SkillBufferDataBase // TypeDefIndex: 2848 | public override void Updata() { }
+o_buff43 = 0x13CB3A8
+
+-- internal class DetectionBuf : SkillBufferDataBase // TypeDefIndex: 2849 | public override void Updata() { }
+o_buff44 = 0x13CB484
+
+-- public class DiseasetSealBuf : CircleBufferBase // TypeDefIndex: 2850 | public override void Updata() { }
+o_buff45 = 0x13CB648
+
+-- public class DivaCheeringBuf : SkillBufferDataBase // TypeDefIndex: 2851 | public override void Updata() { }
+o_buff46 = 0x13CB648
+
+-- public class DoubleThrowBuf : SkillBufferDataBase // TypeDefIndex: 2852 | public override void Updata() { }
+o_buff47 = 0x13CB724
+
+-- internal class DragonicChargeBuf : CountBufferBase // TypeDefIndex: 2853 | public override void Updata() { }
+o_buff48 = 0x13CB860
+
+-- public class DragonTailBuf : SkillBufferDataBase // TypeDefIndex: 2854 | public override void Updata() { }
+o_buff49 = 0x13CB9A4
+
+-- public class DrainBarrierBuf : SkillBufferDataBase // TypeDefIndex: 2855 | public override void Updata() { }
+o_buff50 = 0x13CBB68
+
+-- public class DrainRecallBuf : SkillBufferDataBase // TypeDefIndex: 2856 | public override void Updata() { }
+o_buff51 = 0x13CBD4C
+
+-- public class DualBringerBuf : SkillBufferDataBase // TypeDefIndex: 2858 | public override void Updata() { }
+o_buff52 = 0x13CBEE0
+
+-- public class EarthShatteringBuf : CountBufferBase // TypeDefIndex: 2859 | public override void Updata() { }
+o_buff53 = 0x13CC5A0
+
+-- public class EarthShatteringPassiveBuf : CountBufferBase // TypeDefIndex: 2860 | public override void Updata() { }
+o_buff54 = 0x13CC7A8
+
+-- public class EarthStyleBuf : CountBufferBase // TypeDefIndex: 2861 | public override void Updata() { }
+o_buff55 = 0x13CC8A4
+
+-- public class ElegantStanceBuf : SkillBufferDataBase // TypeDefIndex: 2862 | public override void Updata() { }
+o_buff56 = 0x13CCAE0
+
+-- public class ElementReachBuf : CountBufferBase // TypeDefIndex: 2863 | public override void Updata() { }
+o_buff57 = 0x13CCB1C
+
+-- public class EnchantedBurstBuf : CountBufferBase // TypeDefIndex: 2866 | public override void Updata() { }
+o_buff58 = 0x13CCC1C
+
+-- public class EnchantedBurstSwordBuf : SkillBufferDataBase // TypeDefIndex: 2867 | public override void Updata() { }
+o_buff59 = 0x13CD0D8
+
+-- public class EnchantedDanceBuf : DancerBufferBase // TypeDefIndex: 2868 | public override void Updata() { }
+o_buff60 = 0x13CD2C4
+
+-- public class EnchantedSpellBuf : SkillBufferDataBase // TypeDefIndex: 2869 | public override void Updata() { }
+o_buff61 = 0x13CD3B4
+
+-- public class EnchantedSwordBuf : SkillBufferDataBase // TypeDefIndex: 2870 | public override void Updata() { }
+o_buff62 = 0x13CD450
+
+-- public class EnhanceBuf : SkillBufferDataBase // TypeDefIndex: 2872 | public override void Updata() { }
+o_buff63 = 0x13CD580
+
+-- public class EnthusiasticSongBuf : SkillSongBufferDataBase // TypeDefIndex: 2873 | public override void Updata() { }
+o_buff64 = 0x13CDFB8
+
+-- public class EquipMagicBarrierBuf : EquipSkillBufferBase // TypeDefIndex: 2874 | public override void Updata() { }
+o_buff65 = 0x13CDFB8
+
+-- public class EquipPhysicalBarrierBuf : EquipSkillBufferBase // TypeDefIndex: 2875 | public override void Updata() { }
+o_buff66 = 0x13CE3F0
+
+-- public class EquipRateBarrierBuf : EquipSkillBufferBase // TypeDefIndex: 2876 | public override void Updata() { }
+o_buff67 = 0x13CE828
+
+-- public class EternalNightmareBuf : SkillBufferDataBase // TypeDefIndex: 2879 | public override void Updata() { }
+o_buff68 = 0x13CEE68
+
+-- public class EtherCoatBuf : SkillBufferDataBase // TypeDefIndex: 2880 | public override void Updata() { }
+o_buff69 = 0x13CF278
+
+-- public class EtherFlareBuf : SkillBufferDataBase // TypeDefIndex: 2881 | public override void Updata() { }
+o_buff70 = 0x13CF3C4
+
+-- public class EvolutionBuf : SkillBufferDataBase // TypeDefIndex: 2882 | public override void Updata() { }
+o_buff71 = 0x13CF4B0
+
+-- public class ExorcismBuf : SkillBufferDataBase // TypeDefIndex: 2883 | public override void Updata() { }
+o_buff72 = 0x13CF518
+
+-- public class FairyDanceBuf : DancerBufferBase // TypeDefIndex: 2884 | public override void Updata() { }
+o_buff73 = 0x13CF5D4
+
+-- public class FairySongBuf : SkillSongBufferDataBase // TypeDefIndex: 2885 | public override void Updata() { }
+o_buff74 = 0x13CF944
+
+-- public class FamiliaBuf : SkillBufferDataBase // TypeDefIndex: 2886 | public override void Updata() { }
+o_buff75 = 0x13CF944
+
+-- public class FastAttackBuf : SkillBufferDataBase // TypeDefIndex: 2887 | public override void Updata() { }
+o_buff76 = 0x13CFADC
+
+-- public class FearlessBuf : CountBufferBase // TypeDefIndex: 2888 | public override void Updata() { }
+o_buff77 = 0x13CFCC0
+
+-- public class FinishingTouchBuf : CountBufferBase // TypeDefIndex: 2889 | public override void Updata() { }
+o_buff78 = 0x13CFE74
+
+-- public class FirstAidBuf : SkillBufferDataBase // TypeDefIndex: 2890 | public override void Updata() { }
+o_buff79 = 0x13D0178
+
+-- public class FlashArtsBuf : NextAttackBufferBase // TypeDefIndex: 2891 | public override void Updata() { }
+o_buff80 = 0x13D0328
+
+-- public class FloatDashBuf : SkillBufferDataBase // TypeDefIndex: 2892 | public override void Updata() { }
+o_buff81 = 0x13D041C
+
+-- public class FocusBuf : SkillBufferDataBase // TypeDefIndex: 2893 | public override void Updata() { }
+o_buff82 = 0x13D09C0
+
+-- public class ForceArrowBuf : CountBufferBase // TypeDefIndex: 2894 | public override void Updata() { }
+o_buff83 = 0x13D0D30
+
+-- public class ForefistPunchBuf : SkillBufferDataBase // TypeDefIndex: 2895 | public override void Updata() { }
+o_buff84 = 0x13D0DA0
+
+-- public class FuneVinteBuf : SkillBufferDataBase // TypeDefIndex: 2896 | public override void Updata() { }
+o_buff85 = 0x13D0E14
+
+-- public class FuriousEffortsBuf : CountBufferBase // TypeDefIndex: 2897 | public override void Updata() { }
+o_buff86 = 0x13D1000
+
+-- public class FuriousEffortsExtremeBuf : CountBufferBase // TypeDefIndex: 2898 | public override void Updata() { }
+o_buff87 = 0x13D11FC
+
+-- internal class GemCartHealStockpileBuf : CountBufferBase // TypeDefIndex: 2899 | public override void Updata() { }
+o_buff88 = 0x13D12FC
+
+-- internal class GeoImpactBuf : CountBufferBase // TypeDefIndex: 2900 | public override void Updata() { }
+o_buff89 = 0x13D1474
+
+-- public class GladiateBuf : CountBufferBase // TypeDefIndex: 2901 | public override void Updata() { }
+o_buff90 = 0x13D16F4
+
+-- public class GloriaBuf : SkillBufferDataBase // TypeDefIndex: 2902 | public override void Updata() { }
+o_buff91 = 0x13D19CC
+
+-- public class GodHandBuf : CountBufferBase // TypeDefIndex: 2903 | public override void Updata() { }
+o_buff92 = 0x13D1D24
+
+-- public class GoliathTakeShotBuf : CountBufferBase // TypeDefIndex: 2904 | public override void Updata() { }
+o_buff93 = 0x13D21D4
+
+-- public class GuardianBuf : CircleBufferBase // TypeDefIndex: 2905 | public override void Updata() { }
+o_buff94 = 0x13D28A0
+
+-- public class GuardyBladeBuf : SkillBufferDataBase // TypeDefIndex: 2906 | public override void Updata() { }
+o_buff95 = 0x13D28A0
+
+-- public class HalberdTemporaryMatkBuf : SkillBufferDataBase // TypeDefIndex: 2907 | public override void Updata() { }
+o_buff96 = 0x13D291C
+
+-- public class HammerDownBuf : SkillBufferDataBase // TypeDefIndex: 2908 | public override void Updata() { }
+o_buff97 = 0x13D2944
+
+-- public class HandlingerOfGodspeedBuf : SkillBufferDataBase // TypeDefIndex: 2909 | public override void Updata() { }
+o_buff98 = 0x13D2C2C
+
+-- public class HealingShotBuf : SkillBufferDataBase // TypeDefIndex: 2910 | public override void Updata() { }
+o_buff99 = 0x13D33F8
+
+-- public class HealingSongBuf : SkillSongBufferDataBase // TypeDefIndex: 2911 | public override void Updata() { }
+o_buff100 = 0x13D37D0
+
+-- public class HealQigongBuf : CountBufferBase // TypeDefIndex: 2912 | public override void Updata() { }
+o_buff101 = 0x13D37D0
+
+-- public class HeavenlyStarBuf : CountBufferBase // TypeDefIndex: 2913 | public override void Updata() { }
+o_buff102 = 0x13D3ECC
+
+-- public class HideAttackBuf : CountBufferBase // TypeDefIndex: 2914 | public override void Updata() { }
+o_buff103 = 0x13D4178
+
+-- public class HighCycleBuf : CircleBufferBase // TypeDefIndex: 2915 | public override void Updata() { }
+o_buff104 = 0x13D4538
+
+-- public class HighFamiliaBuf : SkillBufferDataBase // TypeDefIndex: 2916 | public override void Updata() { }
+o_buff105 = 0x13D4538
+
+-- public class HighReactionBuf : CircleBufferBase // TypeDefIndex: 2917 | public override void Updata() { }
+o_buff106 = 0x13D4888
+
+-- public class HolyBibleBuf : SkillBufferDataBase // TypeDefIndex: 2918 | public override void Updata() { }
+o_buff107 = 0x13D4888
+
+-- public class HolyGraceBuf : SkillBufferDataBase // TypeDefIndex: 2919 | public override void Updata() { }
+o_buff108 = 0x13D49DC
+
+-- public class HolyGraceNextSkillMpHalvingBuf : NextAttackBufferBase // TypeDefIndex: 2920 | public override void Updata() { }
+o_buff109 = 0x13D4A9C
+
+-- public class HorizontalCutBuf : SkillBufferDataBase // TypeDefIndex: 2921 | public override void Updata() { }
+o_buff110 = 0x13D4B10
+
+-- public class HuntingOneBuf : CountBufferBase // TypeDefIndex: 2922 | public override void Updata() { }
+o_buff111 = 0x13D4BEC
+
+-- public class IchijhinnokazeBuf : CountBufferBase // TypeDefIndex: 2924 | public override void Updata() { }
+o_buff112 = 0x13D50AC
+
+-- public class IllusionarySceneBuf : SkillBufferDataBase // TypeDefIndex: 2925 | public override void Updata() { }
+o_buff113 = 0x13D5F5C
+
+-- public class ImperialRayBuf : SkillBufferDataBase // TypeDefIndex: 2928 | public override void Updata() { }
+o_buff114 = 0x13D6030
+
+-- public class ImprovisationSongBuf : SkillSongBufferDataBase // TypeDefIndex: 2929 | public override void Updata() { }
+o_buff115 = 0x13D6B2C
+
+-- public class InflexibilityBuf : CountBufferBase // TypeDefIndex: 2930 | public override void Updata() { }
+o_buff116 = 0x13D6B2C
+
+-- public class JudgmentOfTheDarkGodBuf : SkillBufferDataBase // TypeDefIndex: 2932 | public override void Updata() { }
+o_buff117 = 0x13D6F6C
+
+-- public class JumpBackShotBuf : SkillBufferDataBase // TypeDefIndex: 2933 | public override void Updata() { }
+o_buff118 = 0x13D7100
+
+-- public class JumpbackShotProtectionBuf : SkillBufferDataBase // TypeDefIndex: 2934 | public override void Updata() { }
+o_buff119 = 0x13D780C
+
+-- internal class KadarElexioBuf : CountBufferBase // TypeDefIndex: 2939 | public override void Updata() { }
+o_buff120 = 0x13D7A10
+
+-- public class KakeiBuf : SkillBufferDataBase // TypeDefIndex: 2940 | public override void Updata() { }
+o_buff121 = 0x13D881C
+
+-- public class KakeiDeffenceBuf : SkillBufferDataBase // TypeDefIndex: 2941 | public override void Updata() { }
+o_buff122 = 0x13D88BC
+
+-- public class KnifeCombatBuf : SkillBufferDataBase // TypeDefIndex: 2942 | public override void Updata() { }
+o_buff123 = 0x13D8AA0
+
+-- public class KnightPledgeBuf : CountBufferBase // TypeDefIndex: 2944 | public override void Updata() { }
+o_buff124 = 0x13D9244
+
+-- public class KnightStanceBuf : CountBufferBase // TypeDefIndex: 2945 | public override void Updata() { }
+o_buff125 = 0x13D9A8C
+
+-- public class KnowledgeSongBuf : SkillSongBufferDataBase // TypeDefIndex: 2946 | public override void Updata() { }
+o_buff126 = 0x13D9EB4
+
+-- public class LevenirBuf : CountBufferBase // TypeDefIndex: 2947 | public override void Updata() { }
+o_buff127 = 0x13D9EB4
+
+-- public class LifeRecoveryBuf : CircleBufferBase // TypeDefIndex: 2948 | public override void Updata() { }
+o_buff128 = 0x13DA180
+
+-- public class LightningHailBuf : SkillBufferDataBase // TypeDefIndex: 2949 | public override void Updata() { }
+o_buff129 = 0x13DA180
+
+-- public class LunaDitherStarBladeRainBuf : SkillBufferDataBase // TypeDefIndex: 2950 | public override void Updata() { }
+o_buff130 = 0x13DA6A4
+
+-- public class LunaDitherStarBuf : SkillBufferDataBase // TypeDefIndex: 2951 | public override void Updata() { }
+o_buff131 = 0x13DA6F8
+
+-- public class MagicBalkanBuf : SkillBufferDataBase // TypeDefIndex: 2952 | public override void Updata() { }
+o_buff132 = 0x13DA764
+
+-- public class MagicBarrierBuf : CircleBufferBase // TypeDefIndex: 2953 | public override void Updata() { }
+o_buff133 = 0x13DA8B0
+
+-- public class MagicBurstBuf : CountBufferBase // TypeDefIndex: 2954 | public override void Updata() { }
+o_buff134 = 0x13DA8B0
+
+-- public class MagicCannonBuf : CountBufferBase // TypeDefIndex: 2955 | public override void Updata() { }
+o_buff135 = 0x13DABE0
+
+-- public class MagicEgelBuf : CountBufferBase // TypeDefIndex: 2957 | public override void Updata() { }
+o_buff136 = 0x13DB234
+
+-- public class MagicImpactBuf : SkillBufferDataBase // TypeDefIndex: 2958 | public override void Updata() { }
+o_buff137 = 0x13DB8B4
+
+-- public class MagicProtectionBuf : CountBufferBase // TypeDefIndex: 2959 | public override void Updata() { }
+o_buff138 = 0x13DBE14
+
+-- public class MagicSkinBuf : SkillBufferDataBase // TypeDefIndex: 2960 | public override void Updata() { }
+o_buff139 = 0x13DC5BC
+
+-- public class MagnumBuf : CountBufferBase // TypeDefIndex: 2961 | public override void Updata() { }
+o_buff140 = 0x13DC6B0
+
+-- public class MailBreakerBuf : SkillBufferDataBase // TypeDefIndex: 2962 | public override void Updata() { }
+o_buff141 = 0x13DC7FC
+
+-- public class MaintainingTheFrontBuf : SkillBufferDataBase // TypeDefIndex: 2963 | public override void Updata() { }
+o_buff142 = 0x13DC898
+
+-- public class ManaCrystalBuf : SkillBufferDataBase // TypeDefIndex: 2969 | public override void Updata() { }
+o_buff143 = 0x13DCBB8
+
+-- public class ManaRechargeBuf : CircleBufferBase // TypeDefIndex: 2970 | public override void Updata() { }
+o_buff144 = 0x13DEE64
+
+-- public class MindimageSenjuBuf : SkillBufferDataBase // TypeDefIndex: 2971 | public override void Updata() { }
+o_buff145 = 0x13DEE64
+
+-- public class MirageStepBuf : SkillBufferDataBase // TypeDefIndex: 2972 | public override void Updata() { }
+o_buff146 = 0x13DEF08
+
+-- public class MizukazeBuf : CountBufferBase // TypeDefIndex: 2973 | public override void Updata() { }
+o_buff147 = 0x13DEFE4
+
+-- public class MoonSlashBuf : CountBufferBase // TypeDefIndex: 2974 | public override void Updata() { }
+o_buff148 = 0x13DF0B0
+
+-- public class MorningStarBuf : SkillBufferDataBase // TypeDefIndex: 2975 | public override void Updata() { }
+o_buff149 = 0x13DF160
+
+-- public class MultipleHuntBuf : NextAttackBufferBase // TypeDefIndex: 2976 | public override void Updata() { }
+o_buff150 = 0x13DF424
+
+-- internal class NemesisBuf : CountBufferBase // TypeDefIndex: 2978 | public override void Updata() { }
+o_buff151 = 0x13DFAF8
+
+-- public class N_DragonToothBuf : SkillBufferDataBase // TypeDefIndex: 2980 | public override void Updata() { }
+o_buff152 = 0x13E0BA4
+
+-- public class OkaranmanBuf : CountBufferBase // TypeDefIndex: 2981 | public override void Updata() { }
+o_buff153 = 0x13E0C08
+
+-- public class OrgaslashBuf : CountBufferBase // TypeDefIndex: 2982 | public override void Updata() { }
+o_buff154 = 0x13E0C3C
+
+-- internal class OverLimitBuf : SkillBufferDataBase // TypeDefIndex: 2983 | public override void Updata() { }
+o_buff155 = 0x13E0F80
+
+-- public class PairOfShieldsBuf : SkillBufferDataBase // TypeDefIndex: 2984 | public override void Updata() { }
+o_buff156 = 0x13E11D4
+
+-- public class ParalysisShotBuf : SkillBufferDataBase // TypeDefIndex: 2985 | public override void Updata() { }
+o_buff157 = 0x13E175C
+
+-- public class ParryingSwordBuf : SkillBufferDataBase // TypeDefIndex: 2986 | public override void Updata() { }
+o_buff158 = 0x13E184C
+
+-- public class PassionDanceBuf : DancerBufferBase // TypeDefIndex: 2987 | public override void Updata() { }
+o_buff159 = 0x13E1B3C
+
+-- public class PenetratorBuf : CountBufferBase // TypeDefIndex: 2988 | public override void Updata() { }
+o_buff160 = 0x13E1D6C
+
+-- public class PhantomSongBuf : SkillSongBufferDataBase // TypeDefIndex: 2989 | public override void Updata() { }
+o_buff161 = 0x13E21E4
+
+-- public class PhiloEclairBuf : SkillBufferDataBase // TypeDefIndex: 2990 | public override void Updata() { }
+o_buff162 = 0x13E21E4
+
+-- public class PriereBuf : SkillBufferDataBase // TypeDefIndex: 2992 | public override void Updata() { }
+o_buff163 = 0x13E2474
+
+-- public class ProtectionBuf : SkillBufferDataBase // TypeDefIndex: 2993 | public override void Updata() { }
+o_buff164 = 0x13E2534
+
+-- public class PunishRayBuf : NextAttackBufferBase // TypeDefIndex: 2994 | public override void Updata() { }
+o_buff165 = 0x13E286C
+
+-- public class P_DeffenceActionBuf : SkillBufferDataBase // TypeDefIndex: 2995 | public override void Updata() { }
+o_buff166 = 0x13E28D4
+
+-- public class QuickAuraBuf : SkillBufferDataBase // TypeDefIndex: 2996 | public override void Updata() { }
+o_buff167 = 0x13E2A54
+
+-- public class QuickLoaderBuf : CountBufferBase // TypeDefIndex: 2997 | public override void Updata() { }
+o_buff168 = 0x13E2B10
+
+-- public class QuickMotionBuf : CircleBufferBase // TypeDefIndex: 2998 | public override void Updata() { }
+o_buff169 = 0x13E2C8C
+
+-- public class RageSwordBuf : SkillBufferDataBase // TypeDefIndex: 2999 | public override void Updata() { }
+o_buff170 = 0x13E2C8C
+
+-- public class RampageBuf : CountBufferBase // TypeDefIndex: 3000 | public override void Updata() { }
+o_buff171 = 0x13E2D38
+
+-- public class RapidChargeBuf : SkillBufferDataBase // TypeDefIndex: 3001 | public override void Updata() { }
+o_buff172 = 0x13E2F98
+
+-- public class RecoveryBuf : SkillBufferDataBase // TypeDefIndex: 3003 | public override void Updata() { }
+o_buff173 = 0x13E32B8
+
+-- public class RedTearBuf : SkillBufferDataBase // TypeDefIndex: 3004 | public override void Updata() { }
+o_buff174 = 0x13E33F8
+
+-- public class RegretBuf : SkillBufferDataBase // TypeDefIndex: 3005 | public override void Updata() { }
+o_buff175 = 0x13E3638
+
+-- public class RepelBladeBuf : SkillBufferDataBase // TypeDefIndex: 3006 | public override void Updata() { }
+o_buff176 = 0x13E37A0
+
+-- public class ResonanceBuf : SkillBufferDataBase // TypeDefIndex: 3008 | public override void Updata() { }
+o_buff177 = 0x13E3958
+
+-- public class RevivalBuf : SkillBufferDataBase // TypeDefIndex: 3009 | public override void Updata() { }
+o_buff178 = 0x13E39F8
+
+-- public class RushAidBuf : SkillBufferDataBase // TypeDefIndex: 3010 | public override void Updata() { }
+o_buff179 = 0x13E3B48
+
+-- public class RushBuf : SkillBufferDataBase // TypeDefIndex: 3011 | public override void Updata() { }
+o_buff180 = 0x13E3ED8
+
+-- public class SaberAuraBuf : CountBufferBase // TypeDefIndex: 3013 | public override void Updata() { }
+o_buff181 = 0x13E4204
+
+-- public class SacredTeachingsBuf : CountBufferBase // TypeDefIndex: 3014 | public override void Updata() { }
+o_buff182 = 0x13E49A4
+
+-- public class SamuraiArcheryBuf : NextAttackBufferBase // TypeDefIndex: 3015 | public override void Updata() { }
+o_buff183 = 0x13E4B34
+
+-- public class SanctuaryBuf : SkillBufferDataBase // TypeDefIndex: 3016 | public override void Updata() { }
+o_buff184 = 0x13E4BCC
+
+-- public class SeekeriusBuf : SkillBufferDataBase // TypeDefIndex: 3017 | public override void Updata() { }
+o_buff185 = 0x13E4DC4
+
+-- public class SenfutsuBuf : SkillBufferDataBase // TypeDefIndex: 3018 | public override void Updata() { }
+o_buff186 = 0x13E4E68
+
+-- public class ShadowlessSlashBuf : SkillBufferDataBase // TypeDefIndex: 3019 | public override void Updata() { }
+o_buff187 = 0x13E4F38
+
+-- public class ShadowWalkBuf : CountBufferBase // TypeDefIndex: 3020 | public override void Updata() { }
+o_buff188 = 0x13E5028
+
+-- public class SharpDanceBuf : DancerBufferBase // TypeDefIndex: 3021 | public override void Updata() { }
+o_buff189 = 0x13E51B8
+
+-- public class ShieldUpperBuf : SkillBufferDataBase // TypeDefIndex: 3022 | public override void Updata() { }
+o_buff190 = 0x13E52E0
+
+-- public class ShiftBuf : CountBufferBase // TypeDefIndex: 3023 | public override void Updata() { }
+o_buff191 = 0x13E535C
+
+-- public class ShiftMotionSpeedBuf : SkillBufferDataBase // TypeDefIndex: 3024 | public override void Updata() { }
+o_buff192 = 0x13E5600
+
+-- public class ShiningClothBuf : SkillBufferDataBase // TypeDefIndex: 3025 | public override void Updata() { }
+o_buff193 = 0x13E568C
+
+-- public class ShukuchiBuf : SkillBufferDataBase // TypeDefIndex: 3026 | public override void Updata() { }
+o_buff194 = 0x13E5718
+
+-- public class SierramBuf : SkillBufferDataBase // TypeDefIndex: 3027 | public override void Updata() { }
+o_buff195 = 0x13E5850
+
+-- public class SlidingBuf : SkillBufferDataBase // TypeDefIndex: 3032 | public override void Updata() { }
+o_buff196 = 0x13E6B40
+
+-- public class SmokeDustBuf : SkillBufferDataBase // TypeDefIndex: 3033 | public override void Updata() { }
+o_buff197 = 0x13E6B98
+
+-- public class SnipingBuf : SkillBufferDataBase // TypeDefIndex: 3034 | public override void Updata() { }
+o_buff198 = 0x13E6CE4
+
+-- public class SongOfLifeBuf : SkillSongBufferDataBase // TypeDefIndex: 3035 | public override void Updata() { }
+o_buff199 = 0x13E6EF0
+
+-- public class SoulHuntBuf : CountBufferBase // TypeDefIndex: 3036 | public override void Updata() { }
+o_buff200 = 0x13E6EF0
+
+-- public class SpiralAirBuf : SkillBufferDataBase // TypeDefIndex: 3037 | public override void Updata() { }
+o_buff201 = 0x13E6F74
+
+-- public class SpriteShieldBuf : SkillBufferDataBase // TypeDefIndex: 3038 | public override void Updata() { }
+o_buff202 = 0x13E703C
+
+-- public class StabilisBuf : SkillBufferDataBase // TypeDefIndex: 3039 | public override void Updata() { }
+o_buff203 = 0x13E70F8
+
+-- public class StoneSkinBuf : CountBufferBase // TypeDefIndex: 3041 | public override void Updata() { }
+o_buff204 = 0x13E72AC
+
+-- public class StormAndUrgeBuf : CountBufferBase // TypeDefIndex: 3042 | public override void Updata() { }
+o_buff205 = 0x13E7544
+
+-- public class StormAndUrgeExtremeBuf : NextAttackBufferBase // TypeDefIndex: 3043 | public override void Updata() { }
+o_buff206 = 0x13E79A4
+
+-- public class StormBlazerBuf : CountBufferBase // TypeDefIndex: 3044 | public override void Updata() { }
+o_buff207 = 0x13E79E8
+
+-- public class SturmLeaperBuf : NextAttackBufferBase // TypeDefIndex: 3045 | public override void Updata() { }
+o_buff208 = 0x13E7AF0
+
+-- public class SupportDanceBuf : DancerBufferBase // TypeDefIndex: 3046 | public override void Updata() { }
+o_buff209 = 0x13E7B40
+
+-- internal class SurvivalInstinctBuf : SkillBufferDataBase // TypeDefIndex: 3047 | public override void Updata() { }
+o_buff210 = 0x13E7BE0
+
+-- public class SwordMoveBuf : SkillBufferDataBase // TypeDefIndex: 3048 | public override void Updata() { }
+o_buff211 = 0x13E7D04
+
+-- public class TakeQigongBuf : CountBufferBase // TypeDefIndex: 3049 | public override void Updata() { }
+o_buff212 = 0x13E7E00
+
+-- public class ThieshankaiBuf : CountBufferBase // TypeDefIndex: 3050 | public override void Updata() { }
+o_buff213 = 0x13E7F8C
+
+-- public class ThorHammerBuf : SkillBufferDataBase // TypeDefIndex: 3051 | public override void Updata() { }
+o_buff214 = 0x13E8054
+
+-- public class ThreeStageThrustBuf : NextAttackBufferBase // TypeDefIndex: 3052 | public override void Updata() { }
+o_buff215 = 0x13E8190
+
+-- internal class TornadoLanceBuf : CountBufferBase // TypeDefIndex: 3053 | public override void Updata() { }
+o_buff216 = 0x13E82B0
+
+-- public class TriggerSlashBuf : SkillBufferDataBase // TypeDefIndex: 3054 | public override void Updata() { }
+o_buff217 = 0x13E84BC
+
+-- public class TwinStormBuf : CountBufferBase // TypeDefIndex: 3056 | public override void Updata() { }
+o_buff218 = 0x13E8A04
+
+-- public class UnannouncedDestinationBuf : SkillBufferDataBase // TypeDefIndex: 3057 | public override void Updata() { }
+o_buff219 = 0x13E93B8
+
+-- public class UnionSwordBuf : SkillBufferDataBase // TypeDefIndex: 3058 | public override void Updata() { }
+o_buff220 = 0x13E9464
+
+-- public class VenomInjectBuf : CountBufferBase // TypeDefIndex: 3059 | public override void Updata() { }
+o_buff221 = 0x13E9548
+
+-- public class VenomSnatchBuf : CountBufferBase // TypeDefIndex: 3060 | public override void Updata() { }
+o_buff222 = 0x13E95DC
+
+-- public class WarCryBuf : SkillBufferDataBase // TypeDefIndex: 3061 | public override void Updata() { }
+o_buff223 = 0x13E965C
+
+-- public class WarProvokeBuf : SkillBufferDataBase // TypeDefIndex: 3062 | public override void Updata() { }
+o_buff224 = 0x13E9748
+
+-- public class WaterStyleBuf : SkillBufferDataBase // TypeDefIndex: 3063 | public override void Updata() { }
+o_buff225 = 0x13E980C
+
+-- public class WeirdnessOfGodBuf : SkillBufferDataBase // TypeDefIndex: 3064 | public override void Updata() { }
+o_buff226 = 0x13E99B8
+
+-- public class WideSpreadBuf : SkillBufferDataBase // TypeDefIndex: 3065 | public override void Updata() { }
+o_buff227 = 0x13E9A88
+
+-- public class WindStyleBuf : SkillBufferDataBase // TypeDefIndex: 3066 | public override void Updata() { }
+o_buff228 = 0x13E9B2C
+
+-- public class WrapAroundBuf : NextAttackBufferBase // TypeDefIndex: 3067 | public override void Updata() { }
+o_buff229 = 0x13E9BCC
+
+-- public class ZanteisettetsuBuf : SkillBufferDataBase // TypeDefIndex: 3068 | public override void Updata() { }
+o_buff230 = 0x13E9C48
+
+-- public class MagicLazerBuf : SkillBufferDataBase // TypeDefIndex: 3091 | public override void Updata() { }
+o_buff231 = 0x13EE774
+
+-- public class BraveUpBuf : SkillBufferDataBase // TypeDefIndex: 3217 | public override void Updata() { }
+o_buff232 = 0x13F9D90
+
+-- public class CutUpBuf : SkillBufferDataBase // TypeDefIndex: 3218 | public override void Updata() { }
+o_buff233 = 0x13F9EC0
+
+-- public class MindUpBuf : SkillBufferDataBase // TypeDefIndex: 3219 | public override void Updata() { }
+o_buff234 = 0x13F9F98
+
+-- public class PetCriticalUpBuf : SkillBufferDataBase // TypeDefIndex: 3220 | public override void Updata() { }
+o_buff235 = 0x13FA0C8
+
