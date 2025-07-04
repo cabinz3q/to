@@ -93,6 +93,15 @@ o_p_crit_rate = 0x11414F0
 -- public abstract class PlayerAttackBase : SkillActionBase // TypeDefIndex: 1438 | protected bool CheckMagicCritical(PlayerStatusBase playerStatus, MobActionManagerBase mobAction) { }
 o_m_crit_rate = 0x1153E60
 
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public float GetNextAtkTime(int aspd) { }
+o_GetNextAtkTime = 0x1130F3C
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int GetSkillDelayRate1(int cspd) { }
+o_GetSkillDelayRate1 = 0x1131224
+
+-- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int GetSkillDelayRate2(int cspd) { }
+o_GetSkillDelayRate2 = 0x1131264
+
 -- public class PlayerSecondaryStatus : IPlayerStatusCalculator // TypeDefIndex: 1392 | public int get_Aspd() { }
 o_atknotime = 0x112DB44
 
