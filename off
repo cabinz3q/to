@@ -1,4 +1,10 @@
 
+o_GetUncheaterCookie = 0xF98140
+o_OnHackXigncodeCallBackForIos = 0xF98144
+o_SetXigncodeUserInfo = 0xF98148
+o_UncheaterHackAppQuit = 0xF9816C
+o_CheckWarningEnable = 0xF9825C
+o_SetDeviceWarningEnable = 0xF98338
 o_unbuff = 0x13FD940
 o_mele = 0x1135CF0
 o_sele = 0x1135DBC
