@@ -1,10 +1,4 @@
 
-o_GetUncheaterCookie = 0xF98140
-o_OnHackXigncodeCallBackForIos = 0xF98144
-o_SetXigncodeUserInfo = 0xF98148
-o_UncheaterHackAppQuit = 0xF9816C
-o_CheckWarningEnable = 0xF9825C
-o_SetDeviceWarningEnable = 0xF98338
 o_unbuff = 0x13FD940
 o_mele = 0x1135CF0
 o_sele = 0x1135DBC
@@ -51,10 +45,8 @@ o_mobnomove = 0xDC4A68
 o_autoskip1 = 0x15C912C
 o_autoskip2 = 0x15C9404
 o_skipboss = 0x1278924
-o_mqnoitem1 = 0x1FF4E38
-o_mqnoitem2 = 0x1FF715C
-o_skipmob1 = 0x1FF541C
-o_skipmob2 = 0x1FF7740
+o_mqnoitem = 0x1FF715C
+o_skipmob = 0x1FF7740
 o_noquest = 0x123A47C
 o_unlockmap = 0xC3AE08
 o_nodrop = 0x13A29D4
